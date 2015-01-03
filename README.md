@@ -3,13 +3,13 @@
 ##Version: 4.2.x
 
 ###Additional Libraries Included:
-*Twitter Bootstrap 3, 
-*jQuery 1.x (for older version of IE, not loaded)
-*jQuery 2.x, 
-*angularjs, 
-*jQuery Scroll to Top (extra.css loaded for this plugin), 
-*json3 (for older versions of IE, not loaded)
-*font-awesome (not loaded)
+* Twitter Bootstrap 3, 
+* jQuery 1.x (for older version of IE, not loaded)
+* jQuery 2.x, 
+* AngularJs, 
+* jQuery Scroll to Top (extra.css loaded for this plugin), 
+* json3 (for older versions of IE, not loaded)
+* Font-Awesome (not loaded)
 
 ###IE 6, 7, 8 Note:
 If supporting older versions of IE, remove jQuery 2.x, add jQuery 1.x and add this markup to main.blade.php
@@ -27,20 +27,17 @@ If supporting older versions of IE, remove jQuery 2.x, add jQuery 1.x and add th
 
 1. Install [Composer](https://getcomposer.org/doc/00-intro.md) if you have not already done so.
 2. Clone this repository.
-3. Update this Laravel installation and dependencies by doing a composer update from the root of your repository directory. You might want to do a composer self-update first if you have not updated your composer installation in over 30 days.
-4. Change the Laravel application key in app/config/app.php to something unique. The current key is:
-```
-'key' => 'SuIDt37qd8ldx3ozhsgEHkPbKVWVnpQf',
-```
+3. Update this Laravel installation and dependencies by doing a *composer update* from the root of your repository directory. You might want to do a *composer self-update* first if you have not updated your composer installation in over 30 days. The commands may differ depending on how you install / link Composer (composer vs. composer.phar).
+4. Generate a new application key with `php artisan key:generate` from your repository root.
 5. Set up your web server configuration for this repository / directory.
 6. Make sure your permissions are correct on your directories and files so that your web server has access to them. You might want to set ACL's on your directories as well.
 7. Go to your GitHub account and create a new repository. *Do not* initialize it with a README.md
-8. On your local machine in the root where this repository was cloned, remove the .git directory, re-initialize this repository as your own with 'git init', set your remote with 'git remote add origin <your-repository-uri-here>', add files with 'git add --all', commit the files with 'git commit -m "initial commit"' and then push to your new repository with 'git push origin master'.
+8. On your local machine in the root where this repository was cloned, remove the .git directory, re-initialize this repository as your own with `git init`, set your remote with `git remote add origin your-repository-uri-here`, add files with `git add --all`, commit the files with `git commit -m "initial commit"` and then push to your new repository with `git push origin master`.
 
 
 ##Other Things to Note:
 
-1. Namespacing has been added. You must do a php artisan dump-autoload before running Laravel in a browser.
+1. Namespacing has been added. You must do a `php artisan dump-autoload` before running Laravel in a browser.
 2. You must set up your own Database. The Laravel Homestead VM is currently the default.
 3. Local debugging has been turned on. It must be turned off manually.
 4. You must include the font awesome css file manually.
@@ -89,7 +86,7 @@ $env = $app->detectEnvironment(array(
 ```
 
 ####.env.local.php
-#####You must add this file yourself to the root of your repository. 
+#####You must add this file your self to the root of your repository. 
 
 It has already been added to .gitignore, so it is not included in the Laravel-Base repository.
 
