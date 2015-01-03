@@ -4,9 +4,9 @@
 
 ###Additional Libraries Included:
 * Twitter Bootstrap 3, 
-* jQuery 1.x (for older version of IE, not loaded)
+* jQuery 1.x (for older versions of IE, not loaded)
 * jQuery 2.x, 
-* AngularJs, 
+* AngularJs 1.3.x, 
 * jQuery Scroll to Top (extra.css loaded for this plugin), 
 * json3 (for older versions of IE, not loaded)
 * Font-Awesome (not loaded)
@@ -38,7 +38,7 @@ If supporting older versions of IE, remove jQuery 2.x, add jQuery 1.x and add th
 ##Other Things to Note:
 
 1. Namespacing has been added. You must do a `php artisan dump-autoload` before running Laravel in a browser.
-2. You must set up your own Database. The Laravel Homestead VM is currently the default.
+2. You must set up your own Database. The Laravel Homestead Setup is currently the default.
 3. Local debugging has been turned on. It must be turned off manually.
 4. You must include the font awesome css file manually.
 
