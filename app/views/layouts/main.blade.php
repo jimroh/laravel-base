@@ -76,13 +76,7 @@
 	        </footer>
 	    </div>
 
-        <!--[if lte IE 9]>
-            <script src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-            <script src="js/json3.min.js"></script>
-        <![endif]-->
-
-        {{ HTML::script('js/jquery-1.11.2.min.js') }}
+        {{ HTML::script('js/jquery-2.1.3.min.js') }}
         {{ HTML::script('js/bootstrap.min.js') }}
         {{ HTML::script('js/angular.min.js') }}
         {{ HTML::script('js/jquery.scrollToTop.min.js') }}
