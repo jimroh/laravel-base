@@ -106,8 +106,19 @@ return
     );
 ```
 
+####app/start/global.php
+
+```
+App::missing(function($exception)
+{
+    return Response::view('error.missing', array(), 404);
+});
+```
+    
 ####app/views/hello.php -> removed.
 ####.gitignore -> .env.local.php added.
 ####app/controllers/HomeController.php -> modified
 ####app/views/layouts/main.blade.php -> added
 ####app/views/home/home.blade.php -> added
+####app/views/error/missing.blade.php -> added
+####app/views/subviews/messages.blade.php -> added
