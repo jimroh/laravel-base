@@ -79,3 +79,11 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
+
+/**
+ * Return a 404 page when httpnotfound exception thrown.
+ */
+App::missing(function($exception)
+{
+    return Response::view('error.missing', array(), 404);
+});
