@@ -27,6 +27,7 @@ If supporting older versions of IE, remove jQuery 2.x, add jQuery 1.x and add th
 
 1. Install [Composer](https://getcomposer.org/doc/00-intro.md) if you have not already done so.
 2. Clone this repository.
+3. Add a [.env.local.php](http://laravel.com/docs/4.2/configuration#protecting-sensitive-configuration) file to the root of your repository (described later in this README).
 3. Update this Laravel installation and dependencies by doing a *composer update* from the root of your repository directory. You might want to do a *composer self-update* first if you have not updated your composer installation in over 30 days. The commands may differ depending on how you install / link Composer (composer vs. composer.phar).
 4. Generate a new application key with `php artisan key:generate` from your repository root.
 5. Set up your web server configuration for this repository / directory.
