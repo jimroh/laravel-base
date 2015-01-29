@@ -2,7 +2,7 @@
 
 <html lang="en">
 	<head>
-		<title>{{{ $metaTitle or 'Laravel Base With Twitter Bootstrap' }}}</title>
+		<title>{{{ $pageTitle or 'Laravel Base With Twitter Bootstrap' }}}</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		@if (isset($metaDescription))
@@ -20,7 +20,7 @@
 		<link href="/favicon.ico" rel="icon" type="image/x-icon" />     
 		{{ HTML::style('css/bootstrap.min.css'); }}
 		{{ HTML::style('css/bootstrap-theme.min.css'); }}
-        {{ HTML::style('css/extras.css'); }}
+        {{ HTML::style('css/extras.min.css'); }}
 
 		@yield('head')
 	</head>
