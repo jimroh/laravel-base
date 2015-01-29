@@ -7,7 +7,7 @@
 * jQuery 1.x (for older versions of IE, not loaded)
 * jQuery 2.x, 
 * AngularJs 1.3.x, 
-* jQuery Scroll to Top (extra.css loaded for this plugin), 
+* jQuery Scroll to Top (extras.min.css loaded for this plugin), 
 * json3 (for older versions of IE, not loaded)
 * Font-Awesome (not loaded)
 
