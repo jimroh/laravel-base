@@ -123,3 +123,4 @@ App::missing(function($exception)
 ####app/views/home/home.blade.php -> added
 ####app/views/error/missing.blade.php -> added
 ####app/views/subviews/messages.blade.php -> added
+####app/database/migrations/2015_02_02225021_create_users_table.php -> added
