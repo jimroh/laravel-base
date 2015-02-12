@@ -58,6 +58,45 @@ Route::get(
     '/', 
     ['as' => 'home.get', 'uses' => 'Controllers\HomeController@getHome']
 );
+
+// Login Routes
+Route::get(
+    'login', 
+    ['as' => 'login.get', 'uses' => 'Controllers\HomeController@getLogin']
+);
+
+Route::post(
+    'login', 
+    ['as' => 'login.post', 'before' => 'csrf', 'uses' => 'Controllers\HomeController@postLogin']
+);
+
+// Logout Route
+Route::get(
+    'logout', 
+    ['as' => 'logout.get', 'uses' => 'Controllers\LoginController@getLogout']
+);
+
+//Password Reminder Routes
+Route::get(
+    'password-reminder', 
+    ['as' => 'password.reminder.get', 'uses' => 'Controllers\PasswordController@getRemind']
+);
+
+Route::post(
+    'password-reminder', 
+    ['as' => 'password.reminder.post', 'before' => 'csrf', 'uses' => 'Controllers\PasswordController@postRemind']
+);
+
+// Password Reset Routes
+Route::get(
+    'password-reset/{token?}', 
+    ['as' => 'password.reset.get', 'uses' => 'Controllers\PasswordController@getReset']
+);
+
+Route::post(
+    'password-reset', 
+    ['as' => 'password.reset.post', 'before' => 'csrf', 'uses' => 'Controllers\PasswordController@postReset']
+);
 ```
 
 ####bootstrap/start.php
@@ -87,12 +126,11 @@ $env = $app->detectEnvironment(array(
 ```
 
 ####.env.local.php
-#####You must add this file your self to the root of your repository. 
+#####You must add this file yourself to the root of your repository. 
 
 It has already been added to .gitignore, so it is not included in the Laravel-Base repository.
 
-When going to production, you must transfer the config in app/config/local/database.php to app/config/database.php
-and create an .env.php file.
+When going to production, you must transfer the config in app/config/local/database.php to app/config/database.php and create an .env.php file.
 
 ```
 return 
@@ -119,8 +157,14 @@ App::missing(function($exception)
 ####app/views/hello.php -> removed.
 ####.gitignore -> .env.local.php added.
 ####app/controllers/HomeController.php -> modified
+####app/controllers/PasswordController.php -> added
 ####app/views/layouts/main.blade.php -> added
 ####app/views/home/home.blade.php -> added
+####app/views/home/login.blade.php -> added
 ####app/views/error/missing.blade.php -> added
 ####app/views/subviews/messages.blade.php -> added
+####app/views/javascripts/emailfocus.blade.php -> added
+####app/views/javascripts/usernamefocus.blade.php -> added
+####app/views/password/remind.blade.php -> added
+####app/views/password/reset.blade.php -> added
 ####app/database/migrations/2015_02_02225021_create_users_table.php -> added
