@@ -43,6 +43,17 @@
                             <a href="#" target="_blank">Blog</a>
                         </li>
             		</ul>
+                     <ul class="nav navbar-nav navbar-right">
+                        @if(Auth::check())
+                            <li>
+                                {{ link_to_route('logout.get', 'Logout'); }}
+                            </li>
+                        @else
+                            <li class="{{{ isset($active) && $active === 'login' ? 'active' : 'none' }}}">
+                                {{ link_to_route('login.get', 'Login'); }}
+                            </li>
+                        @endif
+                    </ul>1
         		</div><!--/.nav-collapse -->
             </div><!-- /.container-fluid -->
 		</nav>
