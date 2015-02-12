@@ -7,6 +7,7 @@ use Controllers\BaseController;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends BaseController 
 {
@@ -76,14 +77,14 @@ class HomeController extends BaseController
 				'remember_me'
 			);
 
-		// Try to log in
-		if($this->user->login($data['username'], $data['password'], $data['remember_me'])) {
+		// Your login code goes here. Remove the "true" in the if as well.
+		if(true) {
 			return 
 				Redirect::intended(Auth::user()->landing_page);
 		}
 
 		return 
-			Redirect::back()->with('error', $this->user->getMessages());
+			Redirect::back()->with('error', ['Could not log in.']);
 	}
 
 	/**
