@@ -25,17 +25,17 @@ class HomeController extends BaseController
 	*/
 
 	/**
-	 * Get action for the home view
-	 *
-	 * @return void
-	 */
+	* Get action for the home view
+	*
+	* @return void
+	*/
 	public function getHome()
 	{
 		return 
 			View::make('home.home')
 				->with('pageTitle', 'Laravel Base')
 				->with('metaDescription', 'This is a base Laravel set up using Twitter Bootstrap 3.0, jQuery and AngularJS.')
-			; 
+			;
 	}
 
 	/**
