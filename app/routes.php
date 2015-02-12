@@ -16,3 +16,14 @@ Route::get(
     '/', 
     ['as' => 'home.get', 'uses' => 'Controllers\HomeController@getHome']
 );
+
+// Login Routes
+Route::get(
+    'login', 
+    ['as' => 'login.get', 'uses' => 'Controllers\HomeController@getLogin']
+);
+
+Route::post(
+    'login', 
+    ['as' => 'login.post', 'before' => 'csrf', 'uses' => 'Controllers\HomeController@postLogin']
+);
