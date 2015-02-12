@@ -28,6 +28,12 @@ Route::post(
     ['as' => 'login.post', 'before' => 'csrf', 'uses' => 'Controllers\HomeController@postLogin']
 );
 
+// Logout Route
+Route::get(
+    'logout', 
+    ['as' => 'logout.get', 'uses' => 'Controllers\HomeController@getLogout']
+);
+
 //Password Reminder Routes
 Route::get(
     'password-reminder', 
