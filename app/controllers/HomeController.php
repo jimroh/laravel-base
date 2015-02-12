@@ -35,7 +35,7 @@ class HomeController extends BaseController
 			View::make('home.home')
 				->with('pageTitle', 'Laravel Base')
 				->with('metaDescription', 'This is a base Laravel set up using Twitter Bootstrap 3.0, jQuery and AngularJS.')
-			;
+			; 
 	}
 
 	/**
