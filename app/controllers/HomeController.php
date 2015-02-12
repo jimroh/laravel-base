@@ -77,8 +77,8 @@ class HomeController extends BaseController
 				'remember_me'
 			);
 
-		// Your login code goes here. Remove the "true" in the if as well.
-		if(true) {
+		// Your login code goes here. Remove the "false" in the if as well.
+		if(false) {
 			return 
 				Redirect::intended(Auth::user()->landing_page);
 		}
