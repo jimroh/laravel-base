@@ -31,7 +31,7 @@ Route::post(
 // Logout Route
 Route::get(
     'logout', 
-    ['as' => 'logout.get', 'uses' => 'Controllers\LoginController@getLogout']
+    ['as' => 'logout.get', 'uses' => 'Controllers\HomeController@getLogout']
 );
 
 //Password Reminder Routes
