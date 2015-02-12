@@ -4,6 +4,7 @@ namespace Controllers;
 
 use Controllers\BaseController;
 
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Redirect;
@@ -73,6 +74,8 @@ class PasswordController extends BaseController
         $credentials = Input::only(
             'email', 'password', 'password_confirmation', 'token'
         );
+
+        // Add validation here. Below uses the users table in your DB.
 
         $response = Password::reset($credentials, function($user, $password)
         {
