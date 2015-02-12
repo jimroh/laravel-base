@@ -9,7 +9,7 @@
                     <h2 class="">{{{ $pageTitle }}}</h2>
                 </div>
                 <div class="padded">
-                    @include('childviews.messages')
+                    @include('subviews.messages')
 
                     {{ Form::open(['route' => 'login.post', 'role' => 'form']); }}
                         <fieldset>
