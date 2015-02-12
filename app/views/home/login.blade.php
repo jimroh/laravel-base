@@ -42,5 +42,5 @@
 @stop
 
 @section('javascripts')
-    @include('javascripts.emailfocus')
+    @include('javascripts.usernamefocus')
 @stop
